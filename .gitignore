@@ -1,0 +1,6 @@
+example.php
+*.log
+Thumbs.db
+google-spreadsheet/
+ZendGdata-1.12.1/
+
