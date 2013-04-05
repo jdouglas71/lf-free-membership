@@ -27,7 +27,7 @@ global $hs_icon_url;
 $hs_icon_url = "http://lincolnfit1.com/favicon.ico";
 
 global $lf_free_membership_email_notify;
-$lf_free_membership_email_notify = "ttomlinson@healthsport.com";
+$lf_free_membership_email_notify = "jdouglas@strategicemarketing.com";
 
 global $lf_free_membership_page;
 $lf_free_membership_page = "http://lincolnfit1.com/membership-download";

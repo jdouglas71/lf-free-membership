@@ -46,15 +46,18 @@ function lf_membership_sendNotifyEmail($vals)
 	$body .= "Zip Code: " . $vals['zip_code'] . "\n";
 
 	$mail->SetFrom( "info@lincolnfit1.com", "Free LincolnFIT1 Membership" );
-	$mail->Subject( "7-day Free LincolnFIT1 Membership signup." );
+	$mail->Subject = "7-day Free LincolnFIT1 Membership signup.";
 	$mail->MsgHTML( $body );
 
-	$mail->AddAddress( "jdouglas71@gmail.com" );
 	$mail->AddAddress( get_option(LF_FREE_MEMBERSHIP_EMAIL_NOTIFY) );
 
 	if( !$mail->Send() )
 	{
 		lflogToFile( "Email send failed: " . $mail->ErrorInfo );
+	}
+	else
+	{
+		lflogToFile( "Email Sent!!!" );
 	}
 }
 
