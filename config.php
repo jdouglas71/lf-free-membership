@@ -23,8 +23,8 @@ define('SCRIPT_DEBUG', true );
 global $lf_free_membership_version;
 $lf_free_membership_version = "0.7";
 
-global $hs_icon_url;
-$hs_icon_url = "http://lincolnfit1.com/favicon.ico";
+global $lf_icon_url;
+$lf_icon_url = "http://lincolnfit1.com/wp-content/uploads/2013/02/16x16-icon.png";
 
 global $lf_free_membership_email_notify;
 $lf_free_membership_email_notify = "jdouglas@strategicemarketing.com";

@@ -41,8 +41,8 @@ function lf_free_membership_admin_init()
  */
 function lf_free_membership_admin_menu()
 {
-	global $hs_icon_url;
-	$page = add_menu_page( 'LincolnFIT1 Free Membership', 'LincolnFIT1 Free Membership', 'administrator', 'lf_free_membership', 'lf_free_membership_admin_page', $hs_icon_url);
+	global $lf_icon_url;
+	$page = add_menu_page( 'LincolnFIT1 Free Membership', 'LincolnFIT1 Free Membership', 'administrator', 'lf_free_membership', 'lf_free_membership_admin_page', $lf_icon_url);
 
 	add_action( 'admin_print_styles-'.$page, 'lf_free_membership_admin_styles' );
 }
