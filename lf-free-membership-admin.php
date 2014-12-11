@@ -47,7 +47,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 <form name="lf_free_membership_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 	<input type="hidden" name="lf_free_membership_hidden" value="Y">
 	<p><?php _e("Notification Email: " ); ?><input type="text" name="lf_free_membership_email_notify" value="<?php echo $lf_free_membership_email_notify; ?>" size="64"></p>
-	<p><?php _e("Login Page: " ); ?><input type="text" name="dcs_free_membership_page" value="<?php echo $dcs_free_membership_page; ?>" size="128"></p>
+	<p><?php _e("Redirect Page: " ); ?><input type="text" name="dcs_free_membership_page" value="<?php echo $dcs_free_membership_page; ?>" size="128"></p>
 	<p><?php _e("Login form background image: " ); ?><input type="text" name="dcs_free_membership_background" value="<?php echo $dcs_free_membership_background; ?>" size="128"></p>
 	<p><?php _e("Login form button image: " ); ?><input type="text" name="dcs_free_membership_button" value="<?php echo $dcs_free_membership_button; ?>" size="128"></p>
 	<p class="submit">
