@@ -64,7 +64,7 @@ switch(@$_POST["action"])
 		//Send email to notifier
 		lf_membership_sendNotifyEmail( $creds );
 		//Send user to new window
-		$response = "window.open('".site_url($dcs_free_membership_page)."'),'_self');";
+		$response = "window.open('".site_url($dcs_free_membership_page)."','_self');";
 		break;
 
 	default:
