@@ -48,8 +48,8 @@ function lf_membership_sendNotifyEmail($vals)
 	$body .= "Phone: " . $vals['phone'] . "\n";
 	$body .= "Zip Code: " . $vals['zip_code'] . "\n";
 
-	$mail->SetFrom( "info@lincolnfit1.com", "Free LincolnFIT1 Membership" );
-	$mail->Subject = "7-day Free LincolnFIT1 Membership signup.";
+	$mail->SetFrom( "info@theredwoodclubpetaluma.com", "Free Redwood Club Membership" );
+	$mail->Subject = "7-day Free Redwood Club Membership signup.";
 	$mail->MsgHTML( $body );
 
 	$mail->AddAddress( get_option(LF_FREE_MEMBERSHIP_EMAIL_NOTIFY) );

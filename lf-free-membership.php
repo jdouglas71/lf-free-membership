@@ -78,6 +78,7 @@ function lf_free_membership_install()
 	global $dcs_free_membership_background;
 	global $dcs_free_membership_button;
 	global $dcs_free_membership_sidebanner;
+	global $dcs_free_membership_page;
 	
     $result = $wpdb->query( $sql );
 
@@ -106,6 +107,11 @@ function lf_free_membership_install()
 	{
 		update_option(DCS_FREE_MEMBERSHIP_SIDEBANNER, $dcs_free_membership_sidebanner);
 	}
+
+	if( !add_option(DCS_FREE_MEMBERSHIP_PAGE, $dcs_free_membership_page) )
+	{
+		update_option(DCS_FREE_MEMBERSHIP_PAGE, $dcs_free_membership_page);
+	}
 }
 
 /**
@@ -121,6 +127,7 @@ function lf_free_membership_uninstall()
 	delete_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
 	delete_option( DCS_FREE_MEMBERSHIP_BUTTON );
 	delete_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
+	delete_option( DCS_FREE_MEMBERSHIP_PAGE );
 }
 
 /**
@@ -133,6 +140,7 @@ function lf_free_membership_init()
 	global $dcs_free_membership_background;
 	global $dcs_free_membership_button;
 	global $dcs_free_membership_sidebanner;
+	global $dcs_free_membership_page;
 
 	if( !is_admin() )
 	{
@@ -141,6 +149,7 @@ function lf_free_membership_init()
 		$dcs_free_membership_background = get_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
 		$dcs_free_membership_button = get_option( DCS_FREE_MEMBERSHIP_BUTTON );
 		$dcs_free_membership_sidebanner = get_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
+		$dcs_free_membership_page = get_option( DCS_FREE_MEMBERSHIP_PAGE );
 	}
 	wp_register_style( 'lf_free_membership_css', plugins_url('lf-free-membership.css', __FILE__) );
 }
