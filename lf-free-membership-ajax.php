@@ -21,7 +21,7 @@ if(!function_exists("add_action"))
 require(dirname(__FILE__).'/config.php');
 $dataValues = $_POST;
 $response = "alert('".@$_POST["action"]."');";
-global $lf_free_membership_page;
+global $dcs_free_membership_page;
 
 switch(@$_POST["action"])
 {
@@ -64,7 +64,7 @@ switch(@$_POST["action"])
 		//Send email to notifier
 		lf_membership_sendNotifyEmail( $creds );
 		//Send user to new window
-		$response = "window.open('".site_url($lf_free_membership_page)."'),'_self');";
+		$response = "window.open('".site_url($dcs_free_membership_page)."'),'_self');";
 		break;
 
 	default:
