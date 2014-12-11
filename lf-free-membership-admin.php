@@ -34,6 +34,9 @@
 	{
 		//Normal page display
 		$lf_free_membership_email_notify = get_option(LF_FREE_MEMBERSHIP_EMAIL_NOTIFY);
+		$dcs_free_membership_background = get_option(DCS_FREE_MEMBERSHIP_BACKGROUND);
+		$dcs_free_membership_button = get_option(DCS_FREE_MEMBERSHIP_BUTTON);
+		$dcs_free_membership_sidebanner = get_option(DCS_FREE_MEMBERSHIP_SIDEBANNER);
 	}
 	
 	

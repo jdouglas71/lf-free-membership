@@ -35,6 +35,9 @@ $lf_free_membership_email_notify = "jdouglas@strategicemarketing.com";
 global $lf_free_membership_page;
 $lf_free_membership_page = site_url("/membership-download/");
 
+global $dcs_free_membership_background;
+$dcs_free_membership_background = "http://lincolnfit1.com/wp-content/uploads/2013/04/7-Day-Pass-backround.jpg";
+
 global $dcs_free_membership_sidebanner;
 $dcs_free_membership_sidebanner = "http://lincolnfit1.com/wp-content/uploads/2013/04/sidebanner.png";
 
