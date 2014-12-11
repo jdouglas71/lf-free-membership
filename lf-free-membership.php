@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: LincolnFIT1 Free Membership
+Plugin Name: DCS Free Membership
 Plugin URI: http://www.douglasconsulting.net
-Description: LincolnFIT1 Free Membership Plugin.
-Version: 0.7 Beta
+Description: DCS Free Membership Plugin.
+Version: 0.8 Beta
 Author: Jason Douglas
 Author URI: http://www.douglasconsulting.net
 License: GPL
@@ -42,7 +42,7 @@ function lf_free_membership_admin_init()
 function lf_free_membership_admin_menu()
 {
 	global $lf_icon_url;
-	$page = add_menu_page( 'LincolnFIT1 Free Membership', 'LincolnFIT1 Free Membership', 'administrator', 'lf_free_membership', 'lf_free_membership_admin_page', $lf_icon_url);
+	$page = add_menu_page( 'DCS Free Membership', 'DCS Free Membership', 'administrator', 'lf_free_membership', 'lf_free_membership_admin_page', $lf_icon_url);
 
 	add_action( 'admin_print_styles-'.$page, 'lf_free_membership_admin_styles' );
 }
@@ -75,6 +75,9 @@ function lf_free_membership_install()
 	global $wpdb;
 	global $lf_free_membership_version;
 	global $lf_free_membership_email_notify;
+	global $dcs_free_membership_background;
+	global $dcs_free_membership_button;
+	global $dcs_free_membership_sidebanner;
 	
     $result = $wpdb->query( $sql );
 
@@ -88,6 +91,21 @@ function lf_free_membership_install()
 	{
 		update_option(LF_FREE_MEMBERSHIP_EMAIL_NOTIFY, $lf_free_membership_email_notify);
 	}
+
+	if( !add_option(DCS_FREE_MEMBERSHIP_BACKGROUND, $dcs_free_membership_background) )
+	{
+		update_option(DCS_FREE_MEMBERSHIP_BACKGROUND, $dcs_free_membership_background);
+	}
+
+	if( !add_option(DCS_FREE_MEMBERSHIP_BUTTON, $dcs_free_membership_button) )
+	{
+		update_option(DCS_FREE_MEMBERSHIP_BUTTON, $dcs_free_membership_button);
+	}
+
+	if( !add_option(DCS_FREE_MEMBERSHIP_SIDEBANNER, $dcs_free_membership_sidebanner) )
+	{
+		update_option(DCS_FREE_MEMBERSHIP_SIDEBANNER, $dcs_free_membership_sidebanner);
+	}
 }
 
 /**
@@ -100,6 +118,9 @@ function lf_free_membership_uninstall()
 	//Clear out options
 	delete_option( LF_FREE_MEMBERSHIP_VERSION );
 	delete_option( LF_FREE_MEMBERSHIP_EMAIL_NOTIFY );
+	delete_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
+	delete_option( DCS_FREE_MEMBERSHIP_BUTTON );
+	delete_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
 }
 
 /**
@@ -109,11 +130,17 @@ function lf_free_membership_init()
 {
 	global $lf_free_membership_version;
 	global $lf_free_membership_email_notify;
+	global $dcs_free_membership_background;
+	global $dcs_free_membership_button;
+	global $dcs_free_membership_sidebanner;
 
 	if( !is_admin() )
 	{
 		$lf_free_membership_version = get_option( LF_FREE_MEMBERSHIP_VERSION );
 		$lf_free_membership_email_notify = get_option( LF_FREE_MEMBERSHIP_EMAIL_NOTIFY );
+		$dcs_free_membership_background = get_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
+		$dcs_free_membership_button = get_option( DCS_FREE_MEMBERSHIP_BUTTON );
+		$dcs_free_membership_sidebanner = get_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
 	}
 	wp_register_style( 'lf_free_membership_css', plugins_url('lf-free-membership.css', __FILE__) );
 }
