@@ -14,7 +14,6 @@ define('LF_FREE_MEMBERSHIP_VERSION', "lf_free_membership_version");
 define('LF_FREE_MEMBERSHIP_EMAIL_NOTIFY', "lf_free_membership_email_notify" );
 define('DCS_FREE_MEMBERSHIP_BACKGROUND', "dcs_free_membership_background" );
 define('DCS_FREE_MEMBERSHIP_BUTTON', "dcs_free_membership_button" );
-define('DCS_FREE_MEMBERSHIP_SIDEBANNER', "dcs_free_membership_sidebanner" );
 define('DCS_FREE_MEMBERSHIP_PAGE', "dcs_free_membership_page" );
 
 /**Tables*/
@@ -39,9 +38,6 @@ $dcs_free_membership_page = "membership-download";
 
 global $dcs_free_membership_background;
 $dcs_free_membership_background = "http://lincolnfit1.com/wp-content/uploads/2013/04/7-Day-Pass-backround.jpg";
-
-global $dcs_free_membership_sidebanner;
-$dcs_free_membership_sidebanner = "http://lincolnfit1.com/wp-content/uploads/2013/04/sidebanner.png";
 
 global $dcs_free_membership_button;
 $dcs_free_membership_button = "http://lincolnfit1.com/wp-content/uploads/2013/04/button.png";

@@ -28,8 +28,6 @@ function lf_free_membership_form($width="100%")
 	$retval .= "			<input style='width:180px;' src='".$dcs_free_membership_button."' type='image' class='submit' value='Submit' name='lf_submit'>";
 	$retval .= "		</form>";
 	$retval .= "	</div>";
-	$retval .= "	<div style=\"background-image:url('".$dcs_free_membership_sidebanner."');background-repeat:no-repeat;position:absolute;float:left;top:250px;left:100px;width:294px;height:130px;\">";
-	$retval .= "	</div>";
 	$retval .= "</div>";
 
     return $retval;

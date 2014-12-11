@@ -8,7 +8,6 @@ defined('ABSPATH') or die("No script kiddies please!");
 	global $lf_free_membership_email_notify;
 	global $dcs_free_membership_background;
 	global $dcs_free_membership_button;
-	global $dcs_free_membership_sidebanner;
 	global $dcs_free_membership_page;
 
 	if($_POST['lf_free_membership_hidden'] == 'Y') 
@@ -21,10 +20,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 		update_option('dcs_free_membership_background', $dcs_free_membership_background);
 
 		$dcs_free_membership_button = $_POST['dcs_free_membership_button'];
-		update_option('lf_free_membership_button', $dcs_free_membership_button);
-
-		$dcs_free_membership_sidebanner = $_POST['dcs_free_membership_sidebanner'];
-		update_option('dcs_free_membership_sidebanner', $dcs_free_membership_sidebanner);
+		update_option('dcs_free_membership_button', $dcs_free_membership_button);
 
 		$dcs_free_membership_page = $_POST['dcs_free_membership_page'];
 		update_option('dcs_free_membership_page', $dcs_free_membership_page);
@@ -41,7 +37,6 @@ defined('ABSPATH') or die("No script kiddies please!");
 		$lf_free_membership_email_notify = get_option(LF_FREE_MEMBERSHIP_EMAIL_NOTIFY);
 		$dcs_free_membership_background = get_option(DCS_FREE_MEMBERSHIP_BACKGROUND);
 		$dcs_free_membership_button = get_option(DCS_FREE_MEMBERSHIP_BUTTON);
-		$dcs_free_membership_sidebanner = get_option(DCS_FREE_MEMBERSHIP_SIDEBANNER);
 		$dcs_free_membership_page = get_option(DCS_FREE_MEMBERSHIP_PAGE);
 	}
 ?>
@@ -55,7 +50,6 @@ defined('ABSPATH') or die("No script kiddies please!");
 	<p><?php _e("Login Page: " ); ?><input type="text" name="dcs_free_membership_page" value="<?php echo $dcs_free_membership_page; ?>" size="128"></p>
 	<p><?php _e("Login form background image: " ); ?><input type="text" name="dcs_free_membership_background" value="<?php echo $dcs_free_membership_background; ?>" size="128"></p>
 	<p><?php _e("Login form button image: " ); ?><input type="text" name="dcs_free_membership_button" value="<?php echo $dcs_free_membership_button; ?>" size="128"></p>
-	<p><?php _e("Login form sidebanner image: " ); ?><input type="text" name="dcs_free_membership_sidebanner" value="<?php echo $dcs_free_membership_sidebanner; ?>" size="128"></p>
 	<p class="submit">
 		<input type="submit" name="Submit" value="<?php _e('Update Options', 'lf_free_membership_trdom' ) ?>" />
 	</p>
