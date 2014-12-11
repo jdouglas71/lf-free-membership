@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') or die("No script kiddies please!");
 
 /** If Necessary, Load WordPress */
 $wp_root = explode("wp-content",$_SERVER["SCRIPT_FILENAME"]);

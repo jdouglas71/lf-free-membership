@@ -9,6 +9,8 @@ Author URI: http://www.douglasconsulting.net
 License: GPL
 */
 
+defined('ABSPATH') or die("No script kiddies please!");
+
 //LincolnFIT1 Free Membership Config File
 require_once(dirname(__FILE__)."/config.php");
 

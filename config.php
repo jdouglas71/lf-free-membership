@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') or die("No script kiddies please!");
 
 global $wpdb;
 
@@ -28,7 +29,7 @@ global $lf_free_membership_version;
 $lf_free_membership_version = "0.8";
 
 global $lf_icon_url;
-$lf_icon_url = LF_FREE_MEMBERSHIP_RELATIVE_DIR . "DCS_Icon2-32.png";
+$lf_icon_url = LF_FREE_MEMBERSHIP_CALLBACK_DIR . "DCS_Icon2-32.png";
 
 global $lf_free_membership_email_notify;
 $lf_free_membership_email_notify = "jdouglas@strategicemarketing.com";

@@ -1,4 +1,5 @@
 <?php
+defined('ABSPATH') or die("No script kiddies please!");
 
 //User functions
 //require_once(ABSPATH . WPINC . '/registration.php');
