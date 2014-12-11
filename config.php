@@ -33,8 +33,8 @@ $lf_icon_url = site_url()."/favicon.ico";
 global $lf_free_membership_email_notify;
 $lf_free_membership_email_notify = "jdouglas@strategicemarketing.com";
 
-global $lf_free_membership_page;
-$lf_free_membership_page = "membership-download";
+global $dcs_free_membership_page;
+$dcs_free_membership_page = "membership-download";
 
 global $dcs_free_membership_background;
 $dcs_free_membership_background = "http://lincolnfit1.com/wp-content/uploads/2013/04/7-Day-Pass-backround.jpg";
