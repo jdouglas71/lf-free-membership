@@ -78,6 +78,7 @@ function lf_free_membership_install()
 	global $lf_free_membership_version;
 	global $lf_free_membership_email_notify;
 	global $dcs_free_membership_background;
+	global $dcs_free_membership_sidebanner;
 	global $dcs_free_membership_button;
 	global $dcs_free_membership_page;
 	
@@ -97,6 +98,11 @@ function lf_free_membership_install()
 	if( !add_option(DCS_FREE_MEMBERSHIP_BACKGROUND, $dcs_free_membership_background) )
 	{
 		update_option(DCS_FREE_MEMBERSHIP_BACKGROUND, $dcs_free_membership_background);
+	}
+
+	if( !add_option(DCS_FREE_MEMBERSHIP_SIDEBANNER, $dcs_free_membership_sidebanner) )
+	{
+		update_option(DCS_FREE_MEMBERSHIP_SIDEBANNER, $dcs_free_membership_sidebanner);
 	}
 
 	if( !add_option(DCS_FREE_MEMBERSHIP_BUTTON, $dcs_free_membership_button) )
@@ -121,6 +127,7 @@ function lf_free_membership_uninstall()
 	delete_option( LF_FREE_MEMBERSHIP_VERSION );
 	delete_option( LF_FREE_MEMBERSHIP_EMAIL_NOTIFY );
 	delete_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
+	delete_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
 	delete_option( DCS_FREE_MEMBERSHIP_BUTTON );
 	delete_option( DCS_FREE_MEMBERSHIP_PAGE );
 }
@@ -133,6 +140,7 @@ function lf_free_membership_init()
 	global $lf_free_membership_version;
 	global $lf_free_membership_email_notify;
 	global $dcs_free_membership_background;
+	global $dcs_free_membership_sidebanner;
 	global $dcs_free_membership_button;
 	global $dcs_free_membership_page;
 
@@ -141,6 +149,7 @@ function lf_free_membership_init()
 		$lf_free_membership_version = get_option( LF_FREE_MEMBERSHIP_VERSION );
 		$lf_free_membership_email_notify = get_option( LF_FREE_MEMBERSHIP_EMAIL_NOTIFY );
 		$dcs_free_membership_background = get_option( DCS_FREE_MEMBERSHIP_BACKGROUND );
+		$dcs_free_membership_sidebanner = get_option( DCS_FREE_MEMBERSHIP_SIDEBANNER );
 		$dcs_free_membership_button = get_option( DCS_FREE_MEMBERSHIP_BUTTON );
 		$dcs_free_membership_page = get_option( DCS_FREE_MEMBERSHIP_PAGE );
 	}
