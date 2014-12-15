@@ -9,7 +9,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 	global $dcs_free_membership_background;
 	global $dcs_free_membership_button;
 	global $dcs_free_membership_sidebanner;
-	global $dcs_free_membership_page;
+	global $dcs_free_membership_redirect;
 
 	if($_POST['lf_free_membership_hidden'] == 'Y') 
 	{
@@ -26,8 +26,8 @@ defined('ABSPATH') or die("No script kiddies please!");
 		$dcs_free_membership_sidebanner = $_POST['dcs_free_membership_sidebanner'];
 		update_option('dcs_free_membership_sidebanner', $dcs_free_membership_sidebanner);
 
-		$dcs_free_membership_page = $_POST['dcs_free_membership_page'];
-		update_option('dcs_free_membership_page', $dcs_free_membership_page);
+		$dcs_free_membership_redirect = $_POST['dcs_free_membership_redirect'];
+		update_option('dcs_free_membership_redirect', $dcs_free_membership_redirect);
 
         ?>
         <div class="updated"><p><strong><?php _e('Options saved.' ); ?></strong></p></div>
@@ -42,7 +42,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 		$dcs_free_membership_background = get_option(DCS_FREE_MEMBERSHIP_BACKGROUND);
 		$dcs_free_membership_sidebanner = get_option(DCS_FREE_MEMBERSHIP_SIDEBANNER);
 		$dcs_free_membership_button = get_option(DCS_FREE_MEMBERSHIP_BUTTON);
-		$dcs_free_membership_page = get_option(DCS_FREE_MEMBERSHIP_PAGE);
+		$dcs_free_membership_redirect = get_option(DCS_FREE_MEMBERSHIP_REDIRECT);
 	}
 ?>
 
@@ -52,7 +52,7 @@ defined('ABSPATH') or die("No script kiddies please!");
 <form name="lf_free_membership_form" method="post" action="<?php echo str_replace( '%7E', '~', $_SERVER['REQUEST_URI']); ?>">
 	<input type="hidden" name="lf_free_membership_hidden" value="Y">
 	<p><?php _e("Notification Email: " ); ?><input type="text" name="lf_free_membership_email_notify" value="<?php echo $lf_free_membership_email_notify; ?>" size="64"></p>
-	<p><?php _e("Redirect Page: " ); ?><input type="text" name="dcs_free_membership_page" value="<?php echo $dcs_free_membership_page; ?>" size="128"></p>
+	<p><?php _e("Redirect Page: " ); ?><input type="text" name="dcs_free_membership_redirect" value="<?php echo $dcs_free_membership_redirect; ?>" size="128"></p>
 	<p><?php _e("Login form background image: " ); ?><input type="text" name="dcs_free_membership_background" value="<?php echo $dcs_free_membership_background; ?>" size="128"></p>
 	<p><?php _e("Login form sidebanner image: " ); ?><input type="text" name="dcs_free_membership_sidebanner" value="<?php echo $dcs_free_membership_sidebanner; ?>" size="128"></p>
 	<p><?php _e("Login form button image: " ); ?><input type="text" name="dcs_free_membership_button" value="<?php echo $dcs_free_membership_button; ?>" size="128"></p>

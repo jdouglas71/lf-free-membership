@@ -1,6 +1,4 @@
 <?php
-defined('ABSPATH') or die("No script kiddies please!");
-
 /** If Necessary, Load WordPress */
 $wp_root = explode("wp-content",$_SERVER["SCRIPT_FILENAME"]);
 $wp_root = $wp_root[0];
@@ -22,7 +20,7 @@ if(!function_exists("add_action"))
 require(dirname(__FILE__).'/config.php');
 $dataValues = $_POST;
 $response = "alert('".@$_POST["action"]."');";
-global $dcs_free_membership_page;
+$redirect = get_option(DCS_FREE_MEMBERSHIP_REDIRECT);
 
 switch(@$_POST["action"])
 {
@@ -65,7 +63,7 @@ switch(@$_POST["action"])
 		//Send email to notifier
 		lf_membership_sendNotifyEmail( $creds );
 		//Send user to new window
-		$response = "window.open('".site_url($dcs_free_membership_page)."','_self');";
+		$response = "window.open('".site_url($redirect)."','_self');";
 		break;
 
 	default:
